@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>thymeleaf模板</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+简单替换：<p th:id="${id}" th:text="${name}">Welcome to our grocery store!</p><br/>
+循环:<br/>
+
+<div th:each="person : ${persons}">
+<span th:text="${person.id}">Onions</span>&nbsp;&nbsp;
+<span th:text="${person.name}">2.41</span>&nbsp;&nbsp;
+<span th:text="${person.age}">2.41</span>&nbsp;&nbsp;
+</div>
+
+
+
+</body>
+</html>

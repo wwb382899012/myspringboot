@@ -6,3 +6,28 @@
 
 4、静态资源放在src/main/resource/static ，访问静态资源: http://localhost:8080/pic.jpg
      或者 ：  http://localhost:8080/pics/1.jpg
+     
+5、springboot默认不支持jsp，推荐使用 Thymeleaf
+
+6、引入Thymeleaf相关依赖
+a、去官网的文档页面： 如 https://docs.spring.io/spring-boot/docs/2.1.0.RELEASE/reference/htmlsingle/
+b、搜索" starters " 点进去 
+c、找到spring-boot-starter-thymeleaf，点击" Porm "
+d、将
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring5</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-java8time</artifactId>
+		</dependency>
+   放入 pom.xml文件的<dependencys>里面
+   
+   
+   7、Thymeleaf官方文档：https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.pdf
+   8、Thymeleaf使用:http://localhost:8080/temp
