@@ -25,6 +25,7 @@
 	</properties>
 
 	<dependencies>
+		<!-- web场景,包含了web项目的所有依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

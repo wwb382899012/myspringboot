@@ -1,0 +1,8 @@
+1、spring boot自带了 tomcat,并且不用打成war包再执行
+
+2、springboot自带了版本仲裁中心，整合了各个jar包
+
+3、springboot默认使用  slf4j、logback 日志
+
+4、静态资源放在src/main/resource/static ，访问静态资源: http://localhost:8080/pic.jpg
+     或者 ：  http://localhost:8080/pics/1.jpg
