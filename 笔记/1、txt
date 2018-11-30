@@ -1,4 +1,4 @@
-1、spring boot自带了 tomcat,并且不用打成war包再执行
+1、spring boot自带了 tomcat,并且不用打成war包再执行,直接通过jar包即可执行
 
 2、springboot自带了版本仲裁中心，整合了各个jar包
 
@@ -31,3 +31,21 @@ d、将
    
    7、Thymeleaf官方文档：https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.pdf
    8、Thymeleaf使用:http://localhost:8080/temp
+   
+   9、springboot整合tomcat：
+   spring boot自带了 tomcat,并且不用打成war包再执行,直接通过jar包即可执行，
+         要想使用jsp，需要单独配置一个外部tomcat，需要打war包
+         
+         pom.xml多了
+         
+         <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		即打jar包的时候，不再加入 tomcat
+   
+   
+   
+   
