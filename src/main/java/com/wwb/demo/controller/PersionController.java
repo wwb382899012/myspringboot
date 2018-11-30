@@ -22,7 +22,7 @@ public class PersionController {
 	@ResponseBody
 	public String detail(@RequestParam(value="id") Integer id){
 		
-		return "人员"+id;
+		return "第"+id+"个人员";
 	}
 	
 	/**
@@ -36,6 +36,11 @@ public class PersionController {
 		
 		
 		return dto.getName();
+	}
+	
+	@RequestMapping("result")
+	public String result() {
+		return "person/index";
 	}
 
 }

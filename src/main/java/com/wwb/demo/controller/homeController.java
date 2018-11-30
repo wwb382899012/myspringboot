@@ -18,10 +18,8 @@ public class homeController {
 	 * @return
 	 */
 	@RequestMapping("/")
-	@ResponseBody
 	public String index(){
-		return "欢迎，这是首页";
-		
+		return "index";
 	}
 	
 	
