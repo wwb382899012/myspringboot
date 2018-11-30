@@ -10,3 +10,43 @@
 2018-11-30 10:44:16.365  INFO 18636 --- [main] com.wwb.demo.DemoApplicationTests        : Started DemoApplicationTests in 1.849 seconds (JVM running for 2.732)
 2018-11-30 10:44:16.612 ERROR 18636 --- [main] com.wwb.demo.RestApplication             : ´íÎó¡£¡£¡£
 2018-11-30 10:44:16.665  INFO 18636 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-30 11:14:47.029  INFO 20416 --- [main] com.wwb.demo.DemoApplicationTests        : Starting DemoApplicationTests on wenwenbin with PID 20416 (started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+2018-11-30 11:14:47.031  INFO 20416 --- [main] com.wwb.demo.DemoApplicationTests        : The following profiles are active: dev
+2018-11-30 11:14:48.449  INFO 20416 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-30 11:14:48.819  INFO 20416 --- [main] com.wwb.demo.DemoApplicationTests        : Started DemoApplicationTests in 2.107 seconds (JVM running for 3.069)
+2018-11-30 11:14:49.150 ERROR 20416 --- [main] com.wwb.demo.RestApplication             : ´íÎó¡£¡£¡£
+2018-11-30 11:14:49.186  INFO 20416 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-30 11:16:27.684  INFO 17240 --- [main] com.wwb.demo.DemoApplicationTests        : Starting DemoApplicationTests on wenwenbin with PID 17240 (started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+2018-11-30 11:16:27.685  INFO 17240 --- [main] com.wwb.demo.DemoApplicationTests        : The following profiles are active: dev
+2018-11-30 11:16:29.029  INFO 17240 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-30 11:16:29.326  INFO 17240 --- [main] com.wwb.demo.DemoApplicationTests        : Started DemoApplicationTests in 1.945 seconds (JVM running for 2.716)
+2018-11-30 11:16:29.589 ERROR 17240 --- [main] com.wwb.demo.RestApplication             : ´íÎó¡£¡£¡£
+2018-11-30 11:16:29.659  INFO 17240 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-30 11:16:45.933  INFO 7480 --- [main] com.wwb.demo.DemoApplicationTests        : Starting DemoApplicationTests on wenwenbin with PID 7480 (started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+2018-11-30 11:16:45.941  INFO 7480 --- [main] com.wwb.demo.DemoApplicationTests        : The following profiles are active: dev
+2018-11-30 11:16:47.284  INFO 7480 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-30 11:16:47.581  INFO 7480 --- [main] com.wwb.demo.DemoApplicationTests        : Started DemoApplicationTests in 1.949 seconds (JVM running for 2.856)
+2018-11-30 11:16:47.748 ERROR 7480 --- [main] com.wwb.demo.RestApplication             : ´íÎó¡£¡£¡£
+2018-11-30 11:16:47.855  INFO 7480 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-30 11:37:27.047  INFO 7808 --- [main] com.wwb.demo.DemoApplicationTests        : Starting DemoApplicationTests on wenwenbin with PID 7808 (started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+2018-11-30 11:37:27.048  INFO 7808 --- [main] com.wwb.demo.DemoApplicationTests        : The following profiles are active: dev
+2018-11-30 11:37:28.550  INFO 7808 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-30 11:37:29.028  INFO 7808 --- [main] com.wwb.demo.DemoApplicationTests        : Started DemoApplicationTests in 2.423 seconds (JVM running for 3.448)
+2018-11-30 11:37:29.402 ERROR 7808 --- [main] com.wwb.demo.RestApplication             : ´íÎó¡£¡£¡£
+2018-11-30 11:37:29.477  INFO 7808 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-30 14:13:39.670  INFO 15068 --- [main] com.wwb.demo.RestApplication             : Starting RestApplication on wenwenbin with PID 15068 (E:\apache-tomcat-8.0.53\webapps\myspringboot\target\classes started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+2018-11-30 14:13:39.673  INFO 15068 --- [main] com.wwb.demo.RestApplication             : The following profiles are active: dev
+2018-11-30 14:13:40.780  INFO 15068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-11-30 14:13:40.796  INFO 15068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-11-30 14:13:40.796  INFO 15068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-30 14:13:40.805  INFO 15068 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;d:\Program Files\Git\cmd;D:\Program Files\TortoiseGit\bin;D:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\Java\jdk1.8.0_191\jre\bin;E:\phpStudy\PHPTutorial\php\php-7.1.13-nts;E:\phpStudy\PHPTutorial\MySQL\bin;C:\Users\38289\AppData\Local\Microsoft\WindowsApps;;D:\Program Files\eclipse-java-neon-3-win32-x86_64\eclipse;;.]
+2018-11-30 14:13:40.935  INFO 15068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-11-30 14:13:40.935  INFO 15068 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1226 ms
+2018-11-30 14:13:40.958  INFO 15068 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-11-30 14:13:40.961  INFO 15068 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-30 14:13:40.962  INFO 15068 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-30 14:13:40.962  INFO 15068 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2018-11-30 14:13:40.963  INFO 15068 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-30 14:13:41.129  INFO 15068 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-30 14:13:41.357  INFO 15068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-30 14:13:41.360  INFO 15068 --- [main] com.wwb.demo.RestApplication             : Started RestApplication in 2.032 seconds (JVM running for 2.515)

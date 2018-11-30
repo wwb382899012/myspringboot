@@ -4,3 +4,6 @@
 自己的springboot项目
 #### 访问首页
 http://localhost:8080
+
+#### 启动
+run as "DemoApplicationTests.java" 文件
