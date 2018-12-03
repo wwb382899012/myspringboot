@@ -23,6 +23,15 @@ public class homeController {
 		return "index";
 	}
 	
+	/**
+	 * 全局异常捕获
+	 * @return
+	 */
+	@RequestMapping("/myerror")
+	public String test(){
+		Integer a =1/0;
+		return "error";
+	}
 	
 	
 	

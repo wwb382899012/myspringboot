@@ -38,5 +38,11 @@ public class PersionController {
 		return dto.getName();
 	}
 	
+	@RequestMapping("/err")
+	@ResponseBody
+	public String err(){
+		Integer a = 1/0;
+		return "json exception";
+	}
 	
 }
