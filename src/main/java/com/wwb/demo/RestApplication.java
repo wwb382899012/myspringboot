@@ -11,7 +11,7 @@ import ch.qos.logback.classic.Logger;
 
 //主配置类
 @SpringBootApplication
-//@MapperScan("com.wwb.demo.mapper")
+@MapperScan("com.wwb.demo.mapper")
 public class RestApplication {
 
 	Logger logger = (Logger) LoggerFactory.getLogger(RestApplication.class);

@@ -4637,3 +4637,96 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2018-12-03 11:15:33.870  INFO 3500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2018-12-03 11:15:33.895  INFO 3500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
 2018-12-03 11:15:34.103  INFO 3500 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-12-03 11:37:58.171  INFO 15040 --- [main] com.wwb.demo.RestApplication             : Starting RestApplication on wenwenbin with PID 15040 (E:\apache-tomcat-8.0.53\webapps\myspringboot\target\classes started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+2018-12-03 11:37:58.174  INFO 15040 --- [main] com.wwb.demo.RestApplication             : The following profiles are active: dev
+2018-12-03 11:37:58.212  INFO 15040 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28eaa59a: startup date [Mon Dec 03 11:37:58 CST 2018]; root of context hierarchy
+2018-12-03 11:37:59.076  INFO 15040 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b105ef9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-03 11:37:59.581  INFO 15040 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-12-03 11:37:59.591  INFO 15040 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-12-03 11:37:59.592  INFO 15040 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-12-03 11:37:59.702  INFO 15040 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-03 11:37:59.703  INFO 15040 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1493 ms
+2018-12-03 11:37:59.841  INFO 15040 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-03 11:37:59.851  INFO 15040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-03 11:37:59.852  INFO 15040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-03 11:37:59.853  INFO 15040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-03 11:37:59.855  INFO 15040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-03 11:38:00.341  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28eaa59a: startup date [Mon Dec 03 11:37:58 CST 2018]; root of context hierarchy
+2018-12-03 11:38:00.390  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/app/getPersons2]}" onto public java.util.List<java.lang.String> com.wwb.demo.controller.AppMessageController.list()
+2018-12-03 11:38:00.391  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/app/getAll]}" onto public java.util.List<com.wwb.demo.entity.AppMessage> com.wwb.demo.controller.AppMessageController.getAllMessage()
+2018-12-03 11:38:00.391  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/app/getAllJson]}" onto public com.wwb.demo.json.RespJson com.wwb.demo.controller.AppMessageController.getPersonsJson()
+2018-12-03 11:38:00.392  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/db/getPersons2]}" onto public java.util.List<java.lang.String> com.wwb.demo.controller.DbController.list()
+2018-12-03 11:38:00.393  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/db/getPersons]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.wwb.demo.controller.DbController.getDbType()
+2018-12-03 11:38:00.393  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/db/person/{id}]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wwb.demo.controller.DbController.getUser(java.lang.String)
+2018-12-03 11:38:00.394  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.wwb.demo.controller.homeController.index()
+2018-12-03 11:38:00.394  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/temp]}" onto public java.lang.String com.wwb.demo.controller.homeController.welcome(java.util.Map<java.lang.String, java.lang.Object>)
+2018-12-03 11:38:00.395  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/person/list]}" onto public java.lang.String com.wwb.demo.controller.PersionController.list(com.wwb.demo.dto.PersonDto)
+2018-12-03 11:38:00.396  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/person/result]}" onto public java.lang.String com.wwb.demo.controller.PersionController.result()
+2018-12-03 11:38:00.396  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/person/detail]}" onto public java.lang.String com.wwb.demo.controller.PersionController.detail(java.lang.Integer)
+2018-12-03 11:38:00.398  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-03 11:38:00.398  INFO 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-03 11:38:00.421  INFO 15040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-03 11:38:00.421  INFO 15040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-03 11:38:00.463  INFO 15040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-03 11:38:00.605  INFO 15040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-03 11:38:00.606  INFO 15040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-03 11:38:00.609  INFO 15040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-03 11:38:00.666  INFO 15040 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-12-03 11:38:00.670  INFO 15040 --- [main] com.wwb.demo.RestApplication             : Started RestApplication in 2.861 seconds (JVM running for 3.206)
+2018-12-03 11:38:03.599  INFO 15040 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-03 11:38:03.600  INFO 15040 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-03 11:38:03.621  INFO 15040 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2018-12-03 11:38:03.760  INFO 15040 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-12-03 11:42:02.131  INFO 8116 --- [main] com.wwb.demo.RestApplication             : Starting RestApplication on wenwenbin with PID 8116 (E:\apache-tomcat-8.0.53\webapps\myspringboot\target\classes started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+2018-12-03 11:42:02.133  INFO 8116 --- [main] com.wwb.demo.RestApplication             : The following profiles are active: dev
+2018-12-03 11:42:02.697  WARN 8116 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.wwb.demo]' package. Please check your configuration.
+2018-12-03 11:42:03.462  INFO 8116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-12-03 11:42:03.493  INFO 8116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-03 11:42:03.493  INFO 8116 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-03 11:42:03.501  INFO 8116 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;d:\Program Files\Git\cmd;D:\Program Files\TortoiseGit\bin;D:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\Java\jdk1.8.0_191\jre\bin;E:\phpStudy\PHPTutorial\php\php-7.1.13-nts;E:\phpStudy\PHPTutorial\MySQL\bin;C:\Users\38289\AppData\Local\Microsoft\WindowsApps;;D:\Program Files\eclipse-java-neon-3-win32-x86_64\eclipse;;.]
+2018-12-03 11:42:03.610  INFO 8116 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-03 11:42:03.610  INFO 8116 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1431 ms
+2018-12-03 11:42:03.667  WARN 8116 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appMessageController': Unsatisfied dependency expressed through field 'appmessageservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appMessageService': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.wwb.demo.mapper.AppMessageMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-12-03 11:42:03.669  INFO 8116 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-12-03 11:42:03.693  WARN 8116 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:40)
+2018-12-03 11:42:03.717  INFO 8116 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-12-03 11:42:03.818 ERROR 8116 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mapper in com.wwb.demo.service.AppMessageService required a bean of type 'com.wwb.demo.mapper.AppMessageMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.wwb.demo.mapper.AppMessageMapper' in your configuration.
+
+2018-12-03 11:42:18.510  INFO 3616 --- [main] com.wwb.demo.RestApplication             : Starting RestApplication on wenwenbin with PID 3616 (E:\apache-tomcat-8.0.53\webapps\myspringboot\target\classes started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+2018-12-03 11:42:18.514  INFO 3616 --- [main] com.wwb.demo.RestApplication             : The following profiles are active: dev
+2018-12-03 11:42:19.787  INFO 3616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-12-03 11:42:19.810  INFO 3616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-03 11:42:19.810  INFO 3616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-03 11:42:19.820  INFO 3616 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;d:\Program Files\Git\cmd;D:\Program Files\TortoiseGit\bin;D:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\Java\jdk1.8.0_191\jre\bin;E:\phpStudy\PHPTutorial\php\php-7.1.13-nts;E:\phpStudy\PHPTutorial\MySQL\bin;C:\Users\38289\AppData\Local\Microsoft\WindowsApps;;D:\Program Files\eclipse-java-neon-3-win32-x86_64\eclipse;;.]
+2018-12-03 11:42:19.923  INFO 3616 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-03 11:42:19.923  INFO 3616 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1342 ms
+2018-12-03 11:42:20.441  INFO 3616 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-03 11:42:20.585  INFO 3616 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-12-03 11:42:20.726  INFO 3616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-03 11:42:20.735  INFO 3616 --- [main] com.wwb.demo.RestApplication             : Started RestApplication in 2.585 seconds (JVM running for 2.988)
+2018-12-03 11:42:24.507  INFO 3616 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-03 11:42:24.508  INFO 3616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2018-12-03 11:42:24.514  INFO 3616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2018-12-03 11:42:24.542  INFO 3616 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-12-03 11:42:24.754  INFO 3616 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
