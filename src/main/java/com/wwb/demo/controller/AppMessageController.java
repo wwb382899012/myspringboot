@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wwb.demo.entity.AppMessage;
+import com.wwb.demo.json.RespJson;
 import com.wwb.demo.service.AppMessageService;
 
 @RestController
@@ -34,6 +35,15 @@ public class AppMessageController {
 	 * 测试
 	 * @return
 	 */
+	@RequestMapping("/getAllJson")
+    public RespJson getPersonsJson(){
+		return RespJson.success();
+    }
+	
+	/**
+	 * 测试
+	 * @return
+	 */
 	@RequestMapping("/getPersons2")
     public List<String> list(){
       
@@ -41,6 +51,8 @@ public class AppMessageController {
 		persons.add("wwb");
 		return persons;
     }
+	
+	
 	
 
 }
