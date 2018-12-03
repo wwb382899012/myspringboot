@@ -18,6 +18,10 @@ public class AppMessageController {
 	@Autowired 
 	private AppMessageService appmessageservice;
 	
+	/**
+	 * 获取所有消息
+	 * @return
+	 */
 	@RequestMapping("/getAll")
     public List<AppMessage> getAllMessage(){
         
@@ -32,12 +36,21 @@ public class AppMessageController {
     }
 	
 	/**
-	 * 测试
-	 * @return
+	 * 获取所有消息
+	 * @return RespJson
 	 */
 	@RequestMapping("/getAllJson")
     public RespJson getPersonsJson(){
-		return RespJson.success();
+		
+		 List<AppMessage> list = appmessageservice.getMessage();
+	        int num = list.size();
+	        if(null!=list && num>3){
+	            for (int i = 0; i < num-3; i++) {
+	                list.remove(0);
+	            }
+	        }
+		
+		return RespJson.success(list);
     }
 	
 	/**
