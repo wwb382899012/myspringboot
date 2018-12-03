@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.ModelAndView;
 
 //页面跳转方式。注释，即不会生效
-//@ControllerAdvice
+@ControllerAdvice
 public class ExceptionHandler {
 		
 	private static final String ERROR_VIEW="error";

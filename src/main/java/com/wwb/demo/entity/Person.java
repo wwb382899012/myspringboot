@@ -11,7 +11,19 @@ public class Person {
 
     private Integer age;
 
-    /**
+    
+    public Person() {
+	
+	}
+    
+    public Person(Integer id, String name, Integer age) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+
+	/**
      * @return id
      */
     public Integer getId() {

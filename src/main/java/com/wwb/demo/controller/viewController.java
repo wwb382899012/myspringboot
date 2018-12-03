@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.wwb.demo.entity.Person;
 
 
+
 @Controller
 @RequestMapping("/view")
 public class viewController {
