@@ -53,6 +53,11 @@ public class AppMessageController {
 		return RespJson.success(list);
     }
 	
+	@RequestMapping("result")
+	public String result() {
+		return "appMessage/index";
+	}
+	
 	/**
 	 * 测试
 	 * @return

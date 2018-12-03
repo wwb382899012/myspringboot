@@ -38,4 +38,7 @@ public class homeController {
 		return "temp";//加载html文件
 		
 	}
+	
+	
+	
 }

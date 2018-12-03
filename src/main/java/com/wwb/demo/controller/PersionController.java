@@ -43,4 +43,14 @@ public class PersionController {
 		return "person/index";
 	}
 
+	@RequestMapping("db")
+	public String db() {
+		return "db/index";
+	}
+	
+	@RequestMapping("appMessage")
+	public String appMessage() {
+		return "appMessage/index";
+	}
+	
 }

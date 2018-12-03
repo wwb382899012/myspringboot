@@ -74,6 +74,11 @@ public class DbController {
     }
 	
 	
+	@RequestMapping("result")
+	public String result() {
+		return "db/index";
+	}
+	
 	/**
 	 * 测试
 	 * @return
