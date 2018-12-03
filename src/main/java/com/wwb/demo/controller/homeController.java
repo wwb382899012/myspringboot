@@ -24,20 +24,7 @@ public class homeController {
 	}
 	
 	
-	@RequestMapping("/temp")
-	public String welcome(Map<String,Object> map){
-		map.put("name", "我被替换了");
-		map.put("id", "p_id");
-		
-		
-		List<Person> persons = new ArrayList<>();
-		persons.add(new Person(1,"温文斌",21));
-		persons.add(new Person(1,"yyy",22));
-		persons.add(new Person(1,"xxj",23));
-		map.put("persons",persons);
-		return "temp";//加载html文件
-		
-	}
+	
 	
 	
 	
