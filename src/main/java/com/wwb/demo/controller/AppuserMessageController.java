@@ -7,25 +7,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wwb.demo.entity.AppMessage;
+import com.wwb.demo.entity.AppuserMessage;
 import com.wwb.demo.json.RespJson;
-import com.wwb.demo.service.AppMessageService;
+import com.wwb.demo.service.AppuserMessageService;
 
 @RestController
 @RequestMapping("/app")
-public class AppMessageController {
+public class AppuserMessageController {
 	
 	@Autowired 
-	private AppMessageService appmessageservice;
+	private AppuserMessageService appmessageservice;
 	
 	/**
 	 * 获取所有消息
 	 * @return
 	 */
 	@RequestMapping("/getAll")
-    public List<AppMessage> getAllMessage(){
+    public List<AppuserMessage> getAllMessage(){
         
-        List<AppMessage> list = appmessageservice.getMessage();
+        List<AppuserMessage> list = appmessageservice.getMessage();
         int num = list.size();
         if(null!=list && num>3){
             for (int i = 0; i < num-3; i++) {
@@ -42,7 +42,7 @@ public class AppMessageController {
 	@RequestMapping("/getAllJson")
     public RespJson getPersonsJson(){
 		
-		 List<AppMessage> list = appmessageservice.getMessage();
+		 List<AppuserMessage> list = appmessageservice.getMessage();
 	        int num = list.size();
 	        if(null!=list && num>3){
 	            for (int i = 0; i < num-3; i++) {

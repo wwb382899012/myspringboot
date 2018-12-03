@@ -24,7 +24,7 @@
         </jdbcConnection>
 
         <!--这里填写生成的表实体类目录-->
-        <javaModelGenerator targetPackage="com.wwb.demo.mapper" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.wwb.demo.entity" targetProject="src/main/java"/>
 
         <!--这里填写生成的表xml目录-->
         <sqlMapGenerator targetPackage="xml" targetProject="src/main/java/com/wwb/demo/mapper"/>

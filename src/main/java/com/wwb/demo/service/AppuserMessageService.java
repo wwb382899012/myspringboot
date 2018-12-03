@@ -6,17 +6,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.wwb.demo.entity.AppMessage;
-import com.wwb.demo.mapper.AppMessageMapper;
+import com.wwb.demo.entity.AppuserMessage;
+import com.wwb.demo.mapper.mapper.AppuserMessageMapper;
 
 @Service
-public class AppMessageService {
+public class AppuserMessageService {
 
 	@Autowired
-	private AppMessageMapper mapper;
+	private AppuserMessageMapper mapper;
 	
-	public List<AppMessage> getMessage(){
-		List<AppMessage> list = new ArrayList<AppMessage>();
+	public List<AppuserMessage> getMessage(){
+		List<AppuserMessage> list = new ArrayList<AppuserMessage>();
         list = mapper.selectAll();
         return list;
 		

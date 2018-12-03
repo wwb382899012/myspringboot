@@ -1,4 +1,4 @@
-package com.wwb.demo.mapper;
+package com.wwb.demo.entity;
 
 import javax.persistence.*;
 

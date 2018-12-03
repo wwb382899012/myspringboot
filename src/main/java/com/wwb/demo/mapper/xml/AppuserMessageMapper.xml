@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wwb.demo.mapper.mapper.AppuserMessageMapper">
-  <resultMap id="BaseResultMap" type="com.wwb.demo.mapper.AppuserMessage">
+  <resultMap id="BaseResultMap" type="com.wwb.demo.entity.AppuserMessage">
     <!--
       WARNING - @mbggenerated
     -->
@@ -9,4 +9,17 @@
     <result column="message" jdbcType="VARCHAR" property="message" />
     <result column="sendtime" jdbcType="INTEGER" property="sendtime" />
   </resultMap>
+  
+   <sql id="Base_Column_List">
+    id, message, sendtime
+  </sql>
+  
+  
+  <select id="selectAll" resultMap="BaseResultMap">
+    select 
+         id, message, sendtime
+    from appuser_message
+    order by id asc
+  </select>
+  
 </mapper>
