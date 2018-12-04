@@ -6,7 +6,7 @@
 <generatorConfiguration>
     <properties resource="application.properties"/>
 
-    <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+    <context id="MysqlTables" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
@@ -55,9 +55,7 @@
 				enableUpdateByExample="true">
 				
 		</table> -->
-		 <table tableName="user" domainObjectName="User" enableCountByExample="true" enableSelectByPrimaryKey="true" enableDeleteByPrimaryKey="true"
-				enableUpdateByPrimaryKey="true" selectByExampleQueryId="true" enableSelectByExample="true" enableDeleteByExample="true"
-				enableUpdateByExample="true">
+		 <table tableName="user" domainObjectName="User">
 				
 		</table>
 

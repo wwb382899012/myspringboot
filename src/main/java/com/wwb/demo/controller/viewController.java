@@ -30,18 +30,23 @@ public class viewController {
 			
 		}
 		//视图页面
-		@RequestMapping("person")
+		@RequestMapping("/person")
 		public String result() {
 			return "person/index";
 		}
 
-		@RequestMapping("db")
+		@RequestMapping("/db")
 		public String db() {
 			return "db/index";
 		}
 		
-		@RequestMapping("appMessage")
+		@RequestMapping("/appMessage")
 		public String appMessage() {
 			return "appMessage/index";
+		}
+		
+		@RequestMapping("/redis")
+		public String redis() {
+			return "redis/index";
 		}
 }
