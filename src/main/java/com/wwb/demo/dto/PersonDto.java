@@ -31,6 +31,10 @@ public class PersonDto {
 		this.age = age;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.getName()+"、"+this.getAge()+"、"+this.getId();
+	}
 	
 }

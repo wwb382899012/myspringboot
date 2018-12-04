@@ -4,20 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.wwb.demo.RestApplication;
 import com.wwb.demo.entity.Person;
+
+import ch.qos.logback.classic.Logger;
 
 
 
 @Controller
 public class homeController {
 	
-
+	private Logger logger = (Logger) LoggerFactory.getLogger(RestApplication.class);
 	
 	/**
 	 * 默认欢迎也
@@ -25,8 +28,9 @@ public class homeController {
 	 */
 	@RequestMapping("/")
 	public String index(){
-		
+		logger.error("这是错误日志");;
 		return "index";
+		
 	}
 	
 	/**

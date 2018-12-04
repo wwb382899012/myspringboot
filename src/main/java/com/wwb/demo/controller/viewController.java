@@ -49,4 +49,9 @@ public class viewController {
 		public String redis() {
 			return "redis/index";
 		}
+		
+		@RequestMapping("/log")
+		public String log() {
+			return "logs/index";
+		}
 }

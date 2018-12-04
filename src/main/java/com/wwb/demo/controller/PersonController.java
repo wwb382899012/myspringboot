@@ -11,7 +11,7 @@ import com.wwb.demo.dto.PersonDto;
 
 @RestController
 @RequestMapping("/person")
-public class PersionController {
+public class PersonController {
 	/**
 	 * 人员：详情页面
 	 * 访问：http://lcoalhost:端口/person/detail?id=1
