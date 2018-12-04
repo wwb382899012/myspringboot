@@ -6,7 +6,7 @@ import java.util.Date;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-//打开注释即开启
+//打开注释即开启定时任务
 //@Component
 public class TaskController {
 

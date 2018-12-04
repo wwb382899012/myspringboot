@@ -20,7 +20,6 @@ import ch.qos.logback.classic.Logger;
 @Controller
 public class homeController {
 	
-	private Logger logger = (Logger) LoggerFactory.getLogger(RestApplication.class);
 	
 	/**
 	 * 默认欢迎也
@@ -28,9 +27,16 @@ public class homeController {
 	 */
 	@RequestMapping("/")
 	public String index(){
-		logger.error("这是错误日志");;
 		return "index";
-		
+	}
+	
+	/**
+	 * 默认欢迎也
+	 * @return
+	 */
+	@RequestMapping("/login")
+	public String login(){
+		return "login";
 	}
 	
 	/**
