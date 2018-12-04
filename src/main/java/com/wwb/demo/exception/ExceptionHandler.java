@@ -6,13 +6,15 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.ModelAndView;
 
-//页面跳转方式。注释，即不会生效
+
 @ControllerAdvice
 public class ExceptionHandler {
 		
-	private static final String ERROR_VIEW="error";
+	private static final String ERROR_VIEW="errorAdvice";
 	
-	@org.springframework.web.bind.annotation.ExceptionHandler(value= Exception.class)
+	//页面跳转方式。注释，即不会生效
+	
+	/*@org.springframework.web.bind.annotation.ExceptionHandler(value= Exception.class)
 	public Object errorHandler(HttpServletRequest request,HttpServletResponse response,Exception e) throws Exception{
 		
 		e.printStackTrace();
@@ -21,5 +23,5 @@ public class ExceptionHandler {
 		mav.addObject("url",request.getRequestURI());
 		mav.setViewName(ERROR_VIEW);
 		return mav;
-	}
+	}*/
 }

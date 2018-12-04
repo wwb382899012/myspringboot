@@ -13,7 +13,9 @@ public class MyInterceptor implements HandlerInterceptor{
 	
 	@Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        boolean flag =true;
+        //拦截器，必须先登录，才能访问首页
+		
+		boolean flag =true;
         Person user=(Person)request.getSession().getAttribute("user");
         if(null==user){
             response.sendRedirect("/login");
