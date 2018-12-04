@@ -6,7 +6,7 @@
 <generatorConfiguration>
     <properties resource="application.properties"/>
 
-    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
@@ -21,24 +21,45 @@
                         connectionURL="jdbc:mysql://127.0.0.1:3306/springboot?characterEncoding=utf8"
                         userId="root"
                         password="root">
+                        <property name="nullCatalogMeansCurrent" value="true" />
+                        
         </jdbcConnection>
 
         <!--这里填写生成的表实体类目录-->
-        <javaModelGenerator targetPackage="com.wwb.demo.entity" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.wwb.demo.entity" targetProject="src/main/java">
+         	<property name="constructorBased" value="true"/>
+	      <!--   <property name="enableSubPackages" value="true"/>
+			<property name="trimStrings" value="true"/> -->
+        </javaModelGenerator>
 
         <!--这里填写生成的表xml目录-->
-        <sqlMapGenerator targetPackage="xml" targetProject="src/main/java/com/wwb/demo/mapper"/>
+        <sqlMapGenerator targetPackage="xml" targetProject="src/main/java/com/wwb/demo/mapper">
+        	<!-- <property name="enableSubPackages" value="true"/> -->
+        </sqlMapGenerator>
 
         <!--这里填写生成的表mapper目录-->
         <javaClientGenerator targetPackage="com.wwb.demo.mapper.mapper" targetProject="src/main/java"
-                             type="XMLMAPPER"/>
-
+                             type="XMLMAPPER">
+            <!-- <property name="enableSubPackages" value="true"/> -->
+		</javaClientGenerator>
         <!--这里的%通配符表示库里面的所有表-->
-        <table tableName="%">
-            <!--mysql 配置-->
+        <!-- <table tableName="%">
+            mysql 配置
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-            <!--oracle 配置-->
-            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
-        </table>
+            oracle 配置
+            <generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>
+        </table> -->
+        <!-- <table tableName="user" domainObjectName="User"
+				enableCountByExample="true" enableSelectByPrimaryKey="true" enableDeleteByPrimaryKey="true"
+				enableUpdateByPrimaryKey="true" selectByExampleQueryId="true" enableSelectByExample="true" enableDeleteByExample="true"
+				enableUpdateByExample="true">
+				
+		</table> -->
+		 <table tableName="user" domainObjectName="User" enableCountByExample="true" enableSelectByPrimaryKey="true" enableDeleteByPrimaryKey="true"
+				enableUpdateByPrimaryKey="true" selectByExampleQueryId="true" enableSelectByExample="true" enableDeleteByExample="true"
+				enableUpdateByExample="true">
+				
+		</table>
+
     </context>
 </generatorConfiguration>
