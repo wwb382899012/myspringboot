@@ -11,10 +11,10 @@
         <property name="endingDelimiter" value="`"/>
 
 
-        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <!--这里修改成统一的Mapper父接口-->
+        <!--  <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            	这里修改成统一的Mapper父接口,这是另外一种生成方式，生成mapper接口会继承MyMapper
             <property name="mappers" value="com.wwb.demo.mapper.util.MyMapper"/>
-        </plugin>
+        </plugin>  -->
 
         <!--这里填写自己的数据库链接-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -55,8 +55,10 @@
 				enableUpdateByExample="true">
 				
 		</table> -->
-		 <table tableName="user" domainObjectName="User">
-				
+		 <table tableName="appuser_message" domainObjectName="AppuserMessage" enableSelectByPrimaryKey="true" enableDeleteByPrimaryKey="true"
+				enableUpdateByPrimaryKey="true" enableInsert="true" enableCountByExample="false" selectByExampleQueryId="false" enableSelectByExample="false" enableDeleteByExample="false"
+				enableUpdateByExample="false">
+				<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 
     </context>
