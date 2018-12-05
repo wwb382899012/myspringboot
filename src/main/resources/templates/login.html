@@ -3,12 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script th:src="@{/js/jquery-2.1.1.min.js}"></script>
+<script type="text/javascript">
+
+function doLogin(){
+	
+	
+	var pwd = "wwb";
+	var username = "123456";
+	var request ={username:username,pwd:pwd};
+	var jsonStr= JSON.stringify(request);
+	console.log(jsonStr);
+	$.ajax({
+		url:"/doLogin",
+		type:"POST",
+		data:jsonStr,
+		contentType : 'application/json',
+		dataType:"JSON",
+		async:false,
+		success:function(data){
+			if(data.state==0){
+				alert("success!");
+			}
+			else{
+				alert("发生异常："+data.msg);
+			}
+		},
+		error:function(data){
+			alert("请求失败");
+		}
+	});
+}
+
+
+</script>
 </head>
 <body>
 		<table>
-		<tr><td>账号</td><td><input type="text" name="useranme" /></td></tr>
-		<tr><td>密码</td><td><input type="password" name="pwd" /></td></tr>
-		<tr><td></td><td><input type="button" value="登录" /></td></tr>
+		<tr><td>账号</td><td><input type="text" name="username" class="username" /></td></tr>
+		<tr><td>密码</td><td><input type="password" name="pwd" class="pwd" /></td></tr>
+		<tr><td></td><td><input type="button" value="登录" onclick="doLogin()" /></td></tr>
 		</table>
 </body>
 </html>
