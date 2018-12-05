@@ -37278,3 +37278,80 @@ com.wwb.demo.common.RestException: 操作失败
 18:33:55.333 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
 18:34:02.984 logback [http-nio-8080-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 18:34:03.247 logback [http-nio-8080-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:40:57.323 logback [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+18:40:57.428 logback [restartedMain] INFO  com.wwb.demo.RestApplication - Starting RestApplication on wenwenbin with PID 3228 (E:\apache-tomcat-8.0.53\webapps\myspringboot\target\classes started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+18:40:57.429 logback [restartedMain] INFO  com.wwb.demo.RestApplication - The following profiles are active: dev
+18:40:57.508 logback [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18:40:57.510 logback [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18:40:58.432 logback [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:40:58.435 logback [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+18:40:58.477 logback [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28ms. Found 0 repository interfaces.
+18:40:58.876 logback [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3d9f3117] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:40:59.402 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+18:40:59.473 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+18:40:59.481 logback [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18:40:59.481 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+18:40:59.492 logback [restartedMain] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;d:\Program Files\Git\cmd;D:\Program Files\TortoiseGit\bin;D:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\Java\jdk1.8.0_191\jre\bin;E:\phpStudy\PHPTutorial\php\php-7.1.13-nts;E:\phpStudy\PHPTutorial\MySQL\bin;E:\apache-maven-3.5.0-my\bin;C:\Users\38289\AppData\Local\Microsoft\WindowsApps;;D:\Program Files\eclipse-java-neon-3-win32-x86_64\eclipse;;.]
+18:40:59.628 logback [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:40:59.629 logback [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2119 ms
+18:41:00.528 logback [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+18:41:00.699 logback [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+18:41:00.896 logback [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+18:41:00.974 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18:41:01.008 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+18:41:01.021 logback [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+18:41:01.040 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+18:41:01.043 logback [restartedMain] INFO  com.wwb.demo.RestApplication - Started RestApplication in 3.965 seconds (JVM running for 4.64)
+18:41:04.014 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:41:04.014 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:41:04.025 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+18:41:10.040 logback [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18:41:10.242 logback [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:45:41.269 logback [Thread-6] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+18:45:41.270 logback [Thread-6] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+18:45:41.286 logback [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:45:41.338 logback [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+18:45:41.712 logback [restartedMain] INFO  com.wwb.demo.RestApplication - Starting RestApplication on wenwenbin with PID 3228 (E:\apache-tomcat-8.0.53\webapps\myspringboot\target\classes started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+18:45:41.712 logback [restartedMain] INFO  com.wwb.demo.RestApplication - The following profiles are active: dev
+18:45:42.187 logback [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:45:42.187 logback [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+18:45:42.215 logback [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28ms. Found 0 repository interfaces.
+18:45:42.335 logback [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3d9f3117] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:45:42.570 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+18:45:42.571 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+18:45:42.571 logback [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18:45:42.571 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+18:45:42.618 logback [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:45:42.619 logback [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 904 ms
+18:45:42.916 logback [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+18:45:42.970 logback [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+18:45:43.041 logback [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+18:45:43.091 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18:45:43.115 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+18:45:43.120 logback [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+18:45:43.133 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+18:45:43.134 logback [restartedMain] INFO  com.wwb.demo.RestApplication - Started RestApplication in 1.481 seconds (JVM running for 286.732)
+18:45:43.136 logback [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+18:48:02.525 logback [Thread-10] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+18:48:02.528 logback [Thread-10] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+18:48:02.965 logback [restartedMain] INFO  com.wwb.demo.RestApplication - Starting RestApplication on wenwenbin with PID 3228 (E:\apache-tomcat-8.0.53\webapps\myspringboot\target\classes started by 38289 in E:\apache-tomcat-8.0.53\webapps\myspringboot)
+18:48:02.965 logback [restartedMain] INFO  com.wwb.demo.RestApplication - The following profiles are active: dev
+18:48:03.337 logback [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:48:03.337 logback [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+18:48:03.353 logback [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+18:48:03.429 logback [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3d9f3117] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:48:03.900 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+18:48:03.901 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+18:48:03.902 logback [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18:48:03.902 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+18:48:03.947 logback [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:48:03.948 logback [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 980 ms
+18:48:04.293 logback [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+18:48:04.367 logback [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+18:48:04.418 logback [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+18:48:04.530 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18:48:04.567 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+18:48:04.580 logback [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+18:48:04.589 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+18:48:04.593 logback [restartedMain] INFO  com.wwb.demo.RestApplication - Started RestApplication in 1.684 seconds (JVM running for 428.19)
+18:48:04.594 logback [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
