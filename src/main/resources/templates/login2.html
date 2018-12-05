@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script th:src="@{/js/jquery-2.1.1.min.js}"></script>
+<script type="text/javascript">
+
+function doLogin(){
+	
+	
+	var username = $(".username").val();
+	var pwd = $(".pwd").val();
+	var request ={username:username,pwd:pwd};
+	var jsonStr= JSON.stringify(request);
+	console.log(jsonStr);
+	$.ajax({
+		url:"/doLogin2",
+		type:"POST",
+		data:jsonStr,
+		contentType : 'application/json',
+		dataType:"JSON",
+		async:false,
+		success:function(data){
+			if(data.state==0){
+				alert("success!");
+				location.href="/";
+			}
+			else{
+				alert("发生异常："+data.msg);
+			}
+		},
+		error:function(data){
+			alert("请求失败");
+		}
+	});
+}
+
+
+</script>
+</head>
+<body>
+<p style="font-size: 10px;">session存储在redis</p>
+		<table>
+		<tr><td>账号</td><td><input type="text" name="username" class="username" /></td></tr>
+		<tr><td>密码</td><td><input type="password" name="pwd" class="pwd" /></td></tr>
+		<tr><td><input type="button" value="登录" onclick="doLogin()" /></td><td style="font-size: 10px;">账号密码：wwb/123456</td></tr>
+		</table>
+		<p><a href="/login">返回常规方式登录</a></p>
+</body>
+</html>

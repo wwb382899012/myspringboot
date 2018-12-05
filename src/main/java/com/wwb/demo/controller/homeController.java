@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.management.RuntimeErrorException;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -91,6 +92,48 @@ public class homeController extends BaseController{
 		
 	}
 	
+	/**
+	 * 登录处理逻辑2,和doLogin的区别在于配置属性： spring.session.store-type=redis  和 RedisSessionConfig 配置类
+	 * @param dto
+	 * @param session
+	 * @return
+	 */
+	@RequestMapping("/doLogin2")
+	@ResponseBody
+	public RespJson doLogin2(@RequestBody @Validated UserDto dto, HttpServletRequest request){
+		RespJson json = RespJson.success();
+		try {
+			
+			if(dto.getPwd().equals("123456")){//模拟登陆成功
+				HttpSession session = request.getSession();
+				if(session.getAttribute("username")==null){
+					session.setAttribute("username", dto.getUsername());
+					session.setAttribute("pwd", dto.getPwd());
+					//System.out.println(session.getAttribute("user"));
+					json = RespJson.success(dto);
+				}
+				
+			}else{
+				json = RespJson.error("用户名或密码错误");
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			logger.error(e.getMessage());
+			throw new RestException(ResultCodeEnum.FAIL);
+		}
+		
+		return json;
+		
+		
+	}
+	
+	/**
+	 * 退出登录
+	 * @param session
+	 * @param response
+	 * @throws IOException
+	 */
 	@RequestMapping("/loginOut")
 	public void loginOut(HttpSession session,HttpServletResponse response) throws IOException{
 		session.removeAttribute("username");
