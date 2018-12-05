@@ -44,5 +44,10 @@ public interface UserMapper {
      */
     int updateByPrimaryKey(User record);
     
+    /**
+     * 根据账号和密码查询
+     * @param record
+     * @return
+     */
     User selectOneByObj(User record);
 }
