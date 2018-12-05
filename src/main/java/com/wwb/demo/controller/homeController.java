@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +24,9 @@ import com.wwb.demo.common.ResultCodeEnum;
 import com.wwb.demo.dto.PersonDto;
 import com.wwb.demo.dto.UserDto;
 import com.wwb.demo.entity.Person;
+import com.wwb.demo.entity.User;
 import com.wwb.demo.json.RespJson;
+import com.wwb.demo.service.UserService;
 
 import ch.qos.logback.classic.Logger;
 
@@ -32,6 +35,7 @@ import ch.qos.logback.classic.Logger;
 @Controller
 public class homeController extends BaseController{
 	
+	@Autowired UserService userSerivice;
 	
 	/**
 	 * 首页
@@ -71,8 +75,12 @@ public class homeController extends BaseController{
 	public RespJson doLogin(@RequestBody @Validated UserDto dto, HttpSession session){
 		RespJson json = RespJson.success();
 		try {
+			User user = new User();
+			user.setName(dto.getUsername());
+			user.setPwd(dto.getPwd());
+			User result = userSerivice.getUserByNamePwd(user);
 			
-			if(dto.getPwd().equals("123456")){//模拟登陆成功
+			if(result!=null){//模拟登陆成功  dto.getPwd().equals("123456")
 				session.setAttribute("username", dto.getUsername());
 				session.setAttribute("pwd", dto.getPwd());
 				//System.out.println(session.getAttribute("user"));
