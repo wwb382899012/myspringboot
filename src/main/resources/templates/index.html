@@ -12,7 +12,8 @@ h4 a{font-size: 10px;margin-left: 6px;}
 </head>
 <body>
 <h4>这是springboot首页,<font>欢迎你，<span th:text="${session_username}"></span></font><a href="/loginOut">退出</a></h4>
-	<p><a href="/view/temp">thymeleaf模板</a></p>
+	<p><a href="/view/temp">thymeleaf模板，控制器向视图传值方式一： Map</a></p>
+	<p><a href="/view/tempObject">thymeleaf模板，控制器向视图传值方式一： Model</a></p>
 	<p><a href="/view/person">perrson控制器</a></p>
 	<p><a href="/view/db">db控制器:数据操作</a></p>
 	<p><a href="/view/appMessage">appMessage控制器:mybatis操作mysql数据库</a></p>

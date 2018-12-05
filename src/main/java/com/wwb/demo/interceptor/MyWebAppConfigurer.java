@@ -19,7 +19,8 @@ public class MyWebAppConfigurer extends WebMvcConfigurerAdapter {
     	System.out.println("拦截器开始执行，必须先登录才能访问首页");
         
     	//打开注释，即开始执行拦截器
-    	registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/login2","/doLogin","/doLogin2");
+    	//登录页面，静态资源不拦截
+    	registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/login2","/doLogin","/doLogin2","/static");
        
         super.addInterceptors(registry);
     }
