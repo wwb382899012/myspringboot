@@ -7,3 +7,7 @@ http://localhost:8080
 
 #### 启动
 run as "DemoApplicationTests.java" 文件
+
+##生成mapper、xml命令
+mvn mybatis-generator:generate -e
+

@@ -49,12 +49,7 @@
             oracle 配置
             <generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>
         </table> -->
-        <!-- <table tableName="user" domainObjectName="User"
-				enableCountByExample="true" enableSelectByPrimaryKey="true" enableDeleteByPrimaryKey="true"
-				enableUpdateByPrimaryKey="true" selectByExampleQueryId="true" enableSelectByExample="true" enableDeleteByExample="true"
-				enableUpdateByExample="true">
-				
-		</table> -->
+        
 		 <table tableName="user" domainObjectName="User" enableSelectByPrimaryKey="true" enableDeleteByPrimaryKey="true"
 				enableUpdateByPrimaryKey="true" enableInsert="true" enableCountByExample="false" selectByExampleQueryId="false" enableSelectByExample="false" enableDeleteByExample="false"
 				enableUpdateByExample="false">
