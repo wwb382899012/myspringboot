@@ -9,8 +9,8 @@
 function doLogin(){
 	
 	
-	var pwd = "wwb";
-	var username = "123456";
+	var username = $(".username").val();
+	var pwd = $(".pwd").val();
 	var request ={username:username,pwd:pwd};
 	var jsonStr= JSON.stringify(request);
 	console.log(jsonStr);
@@ -24,6 +24,7 @@ function doLogin(){
 		success:function(data){
 			if(data.state==0){
 				alert("success!");
+				location.href="/";
 			}
 			else{
 				alert("发生异常："+data.msg);
@@ -39,10 +40,12 @@ function doLogin(){
 </script>
 </head>
 <body>
+<p style="font-size: 10px;">由于拦截器作用，访问本项目所有的请求，若未登录，需先跳转到的登录页面</p>
 		<table>
 		<tr><td>账号</td><td><input type="text" name="username" class="username" /></td></tr>
 		<tr><td>密码</td><td><input type="password" name="pwd" class="pwd" /></td></tr>
-		<tr><td></td><td><input type="button" value="登录" onclick="doLogin()" /></td></tr>
+		<tr><td><input type="button" value="登录" onclick="doLogin()" /></td><td style="font-size: 10px;">账号密码：wwb/123456</td></tr>
 		</table>
+		<p><a href="/login2">另一种方式登录，session存储在redis中</a></p>
 </body>
 </html>

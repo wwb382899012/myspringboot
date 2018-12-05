@@ -1,10 +1,13 @@
 package com.wwb.demo.controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import javax.management.RuntimeErrorException;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -30,16 +33,17 @@ public class homeController extends BaseController{
 	
 	
 	/**
-	 * 默认欢迎也
+	 * 首页
 	 * @return
 	 */
 	@RequestMapping("/")
-	public String index(){
+	public String index(Map<String, Object> map,HttpSession session){
+		map.put("session_username", session.getAttribute("username"));
 		return "index";
 	}
 	
 	/**
-	 * 默认欢迎也
+	 * 登录也
 	 * @return
 	 */
 	@RequestMapping("/login")
@@ -47,13 +51,33 @@ public class homeController extends BaseController{
 		return "login";
 	}
 	
+	/**
+	 *登录页面2
+	 * @return
+	 */
+	@RequestMapping("/login2")
+	public String login2(){
+		return "login2";
+	}
+	/**
+	 * 登录处理逻辑
+	 * @param dto
+	 * @param session
+	 * @return
+	 */
 	@RequestMapping("/doLogin")
 	@ResponseBody
-	public RespJson doLogin(@RequestBody @Validated UserDto dto){
+	public RespJson doLogin(@RequestBody @Validated UserDto dto, HttpSession session){
 		RespJson json = RespJson.success();
 		try {
-			if(dto.getPwd()=="123456"){//模拟登陆成功
-				
+			
+			if(dto.getPwd().equals("123456")){//模拟登陆成功
+				session.setAttribute("username", dto.getUsername());
+				session.setAttribute("pwd", dto.getPwd());
+				//System.out.println(session.getAttribute("user"));
+				json = RespJson.success(dto);
+			}else{
+				json = RespJson.error("用户名或密码错误");
 			}
 			
 		} catch (Exception e) {
@@ -65,6 +89,13 @@ public class homeController extends BaseController{
 		return json;
 		
 		
+	}
+	
+	@RequestMapping("/loginOut")
+	public void loginOut(HttpSession session,HttpServletResponse response) throws IOException{
+		session.removeAttribute("username");
+		session.removeAttribute("pwd");
+		response.sendRedirect("/");
 	}
 	
 	/**

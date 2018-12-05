@@ -4,9 +4,14 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script th:src="@{/js/jquery-2.1.1.min.js}"></script>
+<style type="text/css">
+
+h4 font{font-size: 10px;margin-left: 2%;}
+h4 a{font-size: 10px;margin-left: 6px;}
+</style>
 </head>
 <body>
-<h4>这是springboot首页</h4>
+<h4>这是springboot首页,<font>欢迎你，<span th:text="${session_username}"></span></font><a href="/loginOut">退出</a></h4>
 	<p><a href="/view/temp">thymeleaf模板</a></p>
 	<p><a href="/view/person">perrson控制器</a></p>
 	<p><a href="/view/db">db控制器:数据操作</a></p>
@@ -15,7 +20,8 @@
 	<p><a href="/person/err">全局异常捕获:json方式(需打开@RestControllerAdvice注解)</a> <input type="button" value="点我" onclick="sendAjax()" /></p>
 	<p><a href="/view/redis">redis</p>
 	<p><a href="/view/log">logback日志处理异常</p>
-	<p><a href="/login">去登录</p>
+	<p><a href="/login">去登录,sesion存储在tomcat服务器，使用session对象存取session</p>
+	<p><a href="/login2">去登录,sesion存储在redis中</p>
 	
 </body>
 

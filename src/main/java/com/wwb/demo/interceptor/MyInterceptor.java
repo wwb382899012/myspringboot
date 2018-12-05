@@ -16,7 +16,7 @@ public class MyInterceptor implements HandlerInterceptor{
         //拦截器，必须先登录，才能访问首页
 		
 		boolean flag =true;
-        Person user=(Person)request.getSession().getAttribute("user");
+        String user=(String) request.getSession().getAttribute("username");
         if(null==user){
             response.sendRedirect("/login");
             flag = false;
