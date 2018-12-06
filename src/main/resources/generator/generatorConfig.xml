@@ -6,7 +6,7 @@
 <generatorConfiguration>
     <properties resource="application.properties"/>
 
-    <context id="MysqlTables" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <context id="MysqlTables" targetRuntime="MyBatis3" defaultModelType="flat">
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
@@ -50,7 +50,7 @@
             <generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>
         </table> -->
         
-		 <table tableName="user" domainObjectName="User" enableSelectByPrimaryKey="true" enableDeleteByPrimaryKey="true"
+		 <table tableName="t_action" domainObjectName="Action" enableSelectByPrimaryKey="true" enableDeleteByPrimaryKey="true"
 				enableUpdateByPrimaryKey="true" enableInsert="true" enableCountByExample="false" selectByExampleQueryId="false" enableSelectByExample="false" enableDeleteByExample="false"
 				enableUpdateByExample="false">
 				<generatedKey column="id" sqlStatement="MySql" identity="true" />
