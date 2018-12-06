@@ -2,6 +2,7 @@ package com.wwb.demo.interceptor;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 
@@ -20,10 +21,12 @@ public class MyWebAppConfigurer extends WebMvcConfigurerAdapter {
         
     	//打开注释，即开始执行拦截器
     	//登录页面，静态资源不拦截
-    	registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/login2","/doLogin","/doLogin2","/static");
+    	registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/login2","/doLogin","/doLogin2","/res/**");
        
         super.addInterceptors(registry);
     }
+    
+    
 
 }
 
