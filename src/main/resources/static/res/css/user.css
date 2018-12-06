@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+*,body{
+	marigin:0;
+	padding:0;
+	font-size:14px;
+	
+}
+.header form{
+	margin:0 0 0 20px;
+	border-bottom:1px solid #dcdcdc;
+}
+.header form p{font-weight:bolder;}
+.header form table tr{line-height:32px;}
+.header form table tr td .btn_add{float:center;}
+
+
+.content{
+	margin:0 0 0 20px;
+}
+
+.content .userDiv{
+	border-bottom:1px solid #dcdcdc;
+	margin:10px auto;
+}
+
+.content .userDiv p a{margin:0 0 0 20px;}
+

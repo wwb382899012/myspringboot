@@ -14,6 +14,11 @@
       <arg column="age" javaType="java.lang.Integer" jdbcType="INTEGER" />
     </constructor>
   </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, name, pwd, age
+  </sql>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
       WARNING - @mbggenerated
@@ -79,5 +84,24 @@
     from user
     where name = #{name,jdbcType=VARCHAR} and pwd = #{pwd,jdbcType=VARCHAR}
   	</select>
+  	
+  	<select id="listPage" parameterType="com.wwb.demo.dto.UserListDto"
+          resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from user
+    <where>
+      <if test="name!=null and name!=''">
+        and `name`like concat('%',#{name,jdbcType=VARCHAR},'%') 
+      </if>
+      <if test="id!=null">
+        and `id` = #{id}
+      </if>
+      <if test="age!=null">
+        and `age` = #{age}
+      </if>
+    </where>
+    order by id desc
+  </select>
   
 </mapper>

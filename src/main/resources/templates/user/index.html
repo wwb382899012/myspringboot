@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script th:src="@{/res/js/jquery-2.1.1.min.js}"></script>
+<link rel="stylesheet" th:href="@{/res/css/user.css}"></style>
+
+<script type="text/javascript">
+
+var pageSize=10;
+var page=1;
+
+
+
+
+
+$(document).ready(function(){
+	
+	
+	
+	var request ={id:'',name:'',pwd:'',age:'',page:page,pageSize:pageSize};
+	var jsonStr= JSON.stringify(request);
+	
+	$.ajax({
+		url:"/user/list",
+		type:"POST",
+		data:jsonStr,
+		contentType : 'application/json',
+		dataType:"JSON",
+		async:false,
+		success:function(data){
+			if(data.state==0){
+				var html="";
+				for(var i in data.data.data){
+					html+="<div class='userDiv'>";
+		 			html+="<p>序号："+data.data.data[i].id+"</p>";
+		 			html+="<p>用户名："+data.data.data[i].name+"</p>";
+		 			html+="<p>年龄："+data.data.data[i].age+"<a href='javascript:void(0)' class='btn_detail'>查看</a><a href='javascript:void(0)'>修改</a><a href='javascript:void(0)' class='btn_delete'>删除</a></p>";
+		 			html+="</div>";
+		 		
+		 			
+					//console.log(data.data.data[i].id);
+				}
+				
+				html+="<p>"+data.data.page+"/"+data.data.totalPages+"页，共"+data.data.totalRows+"条记录</p>";
+				
+				$(".content").html(html);
+				
+			}
+			else{
+				alert("发生异常："+data.msg);
+			}
+		},
+		error:function(data){
+			alert("请求失败");
+		}
+	});
+	
+	
+	//
+	$(".btn_add").click(function(){
+		var name = $(".name").val();
+		var age = $(".age").val();
+		var pwd = $(".pwd").val();
+		
+		var request ={id:'',name:name,pwd:pwd,age:age};
+		var jsonStr= JSON.stringify(request);
+		
+		$.ajax({
+			url:"/user/save",
+			type:"POST",
+			data:jsonStr,
+			contentType : 'application/json',
+			dataType:"JSON",
+			async:false,
+			success:function(data){
+				if(data.state==0){
+					alert("添加成功");
+					location.href.reload();
+				}
+				else{
+					alert("发生异常："+data.msg);
+				}
+			},
+			error:function(data){
+				alert("请求失败");
+			}
+		});
+		
+	})
+	
+})
+	
+	
+
+
+
+
+</script>
+</head>
+<body>
+ 	<div class="header">
+ 		<form action="" >
+ 			<p>添加用户</p>
+ 			<table>
+ 				<tr><td>账号</td><td><input type="text" class="name" /></td></tr>
+ 				<tr><td>密码</td><td><input type="text" class="pwd" /></td></tr>
+ 				<tr><td>年龄</td><td><input type="text" class="age" /></td></tr>
+ 				<tr><td colspan="2"><input type="button" class="btn_add" value="添加" /></td></tr>
+ 			</table>
+ 		</form>
+ 	</div>
+ 	
+ 	<div class="content">
+ 		<div class="userDiv">
+ 			<p>序号：2</p>
+ 			<p>用户名：ww</p>
+ 			<p>年龄：21<a href="/user/detail?id=1">查看</a><a href="/user/detail?id=1">修改</a><a href="/user/detail?id=1">删除</a></p>
+ 		</div>
+ 	</div>
+</body>
+</html>
+
+

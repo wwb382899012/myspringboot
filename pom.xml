@@ -60,12 +60,14 @@
 		    <artifactId>mapper</artifactId>
 		    <version>3.3.2</version>
 		</dependency>
-		<!--pagehelper-->
+		<!--pagehelper 4.1.6  -->
 		<dependency>
         <groupId>com.github.pagehelper</groupId>
         <artifactId>pagehelper</artifactId>
         <version>4.1.6</version>
 		</dependency>
+		
+
 		
 		<!-- Mybatis Generator -->
 		<dependency>

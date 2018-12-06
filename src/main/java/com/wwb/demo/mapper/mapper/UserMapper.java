@@ -1,5 +1,6 @@
 package com.wwb.demo.mapper.mapper;
 
+import com.wwb.demo.dto.UserListDto;
 import com.wwb.demo.entity.User;
 import java.util.List;
 
@@ -50,4 +51,11 @@ public interface UserMapper {
      * @return
      */
     User selectOneByObj(User record);
+    
+    /**
+    * 分页显示
+    * @param record
+    * @return
+    */
+   List<User> listPage(UserListDto record);
 }
