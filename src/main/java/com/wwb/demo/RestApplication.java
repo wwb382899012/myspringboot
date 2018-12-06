@@ -23,7 +23,7 @@ public class RestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RestApplication.class, args);
 		
-		System.out.println("============== demo start  success =============");
+		System.out.println("============== mySpringBoot start  success =============");
 
 	}
 	
