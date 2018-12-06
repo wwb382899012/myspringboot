@@ -3,6 +3,7 @@ package com.wwb.demo.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.catalina.authenticator.SavedRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
@@ -11,10 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 import com.github.pagehelper.Page;
 import com.wwb.demo.common.RestException;
 import com.wwb.demo.common.ResultCodeEnum;
 import com.wwb.demo.dto.UserListDto;
+import com.wwb.demo.dto.UserSaveDto;
 import com.wwb.demo.dto.resp.RespUserListDto;
 import com.wwb.demo.entity.User;
 import com.wwb.demo.json.RespJson;
@@ -26,6 +29,43 @@ public class UserController extends BaseController{
 
 	@Autowired
 	private UserService userService;
+	
+	@RequestMapping("/save")
+	@ResponseBody
+	public RespJson save(@RequestBody @Validated UserSaveDto userSaveDto){
+		try {
+				if(userSaveDto == null)
+					userSaveDto = new UserSaveDto();
+				
+				User user = new User();
+				user.setId(userSaveDto.getId());
+				user.setName(userSaveDto.getName());
+				user.setPwd(userSaveDto.getPwd());
+				user.setAge(userSaveDto.getAge());
+				
+				int re;
+				
+				if(user.getId()==null || user.getId().toString() == ""){
+					 re = userService.insert(user);
+				}else{
+					 re = userService.update(user);
+				}
+				
+				
+				if(re > 0){
+					return RespJson.success();
+				}else {
+					return RespJson.error();
+				}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			 logger.error("异常:{}", e.getMessage());
+	         throw new RestException(ResultCodeEnum.FAIL);
+		}
+	
+		
+	}
 	
 	/**
 	 * 分页：显示 

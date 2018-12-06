@@ -58,7 +58,7 @@ $(document).ready(function(){
 	});
 	
 	
-	//
+	//新增
 	$(".btn_add").click(function(){
 		var name = $(".name").val();
 		var age = $(".age").val();
@@ -77,7 +77,7 @@ $(document).ready(function(){
 			success:function(data){
 				if(data.state==0){
 					alert("添加成功");
-					location.href.reload();
+					location.reload();
 				}
 				else{
 					alert("发生异常："+data.msg);

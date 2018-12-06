@@ -38,4 +38,15 @@ public class UserService {
 		List<User> list = mapper.listPage(dto);
 		return list;
 	}
+	
+	
+	public Integer insert(User record){
+		Integer re = mapper.insert(record);
+		return re;
+	}
+	
+	public Integer update(User record){
+		Integer re = mapper.updateByPrimaryKey(record);
+		return re;
+	}
 }
