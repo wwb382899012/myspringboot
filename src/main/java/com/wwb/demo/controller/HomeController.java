@@ -33,7 +33,7 @@ import ch.qos.logback.classic.Logger;
 
 
 @Controller
-public class homeController extends BaseController{
+public class HomeController extends BaseController{
 	
 	@Autowired UserService userSerivice;
 	

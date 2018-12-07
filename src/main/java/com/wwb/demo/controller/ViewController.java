@@ -14,7 +14,7 @@ import com.wwb.demo.entity.Person;
 
 @Controller
 @RequestMapping("/view")
-public class viewController {
+public class ViewController {
 		
 		@RequestMapping("/temp")
 		public String welcome(Map<String,Object> map){
